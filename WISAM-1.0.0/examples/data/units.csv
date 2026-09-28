@@ -1,3 +1,0 @@
-﻿uid,uname,cid,cname,wid,wname,area,is_mainstream,basin,province,x,y
-SYN_A,Synthetic upstream,SYN_CITY_A,Synthetic city A,SYN_ZONE,Synthetic river,100.0,0,Synthetic basin,Synthetic province,1.0,1.0
-SYN_B,Synthetic downstream,SYN_CITY_B,Synthetic city B,SYN_ZONE,Synthetic river,80.0,0,Synthetic basin,Synthetic province,1.1,0.9

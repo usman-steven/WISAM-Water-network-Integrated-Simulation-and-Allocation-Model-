@@ -1,5 +1,0 @@
-﻿year,city_code,城市,省份,需水万m³,供水万m³,缺水万m³,最大月缺水率,退水万m³,耗水万m³,流域
-2000,SYN_CITY_A,Synthetic city A,Synthetic province,1800.0,1281.6,518.4,1.0,576.4,705.2,Synthetic basin
-2000,SYN_CITY_B,Synthetic city B,Synthetic province,2400.0,2044.2,355.8,0.7661,883.3,1160.9,Synthetic basin
-2001,SYN_CITY_A,Synthetic city A,Synthetic province,1800.0,459.79999999999995,1340.1999999999998,1.0,274.7,185.1,Synthetic basin
-2001,SYN_CITY_B,Synthetic city B,Synthetic province,2400.0,1079.7,1320.3,1.0,575.6,504.1,Synthetic basin
