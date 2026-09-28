@@ -1,0 +1,5 @@
+# Optional features: install the packages needed for your workflow.
+# numba       # Hydrology acceleration; NumPy fallback is available.
+# geopandas   # Read unit centroids from GIS files when input coordinates are absent.
+# xlsxwriter  # Alternative Excel writer.
+

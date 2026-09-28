@@ -1,0 +1,3 @@
+﻿unit_id,runoff_coeff,et_reduction,baseflow_index,eco_priority,is_high_altitude
+SYN_A,0.45,0.5,0.2,1,0
+SYN_B,0.45,0.5,0.2,1,0

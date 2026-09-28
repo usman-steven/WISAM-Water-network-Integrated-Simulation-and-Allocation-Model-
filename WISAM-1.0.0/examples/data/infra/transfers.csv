@@ -1,0 +1,2 @@
+﻿id,name,source_node_id,source_type,intake_capacity,annual_plan,loss_rate,priority,start_year,end_year,dynamic_plan,status,scenario_group,min_source_ratio,min_source_flow,receiving_nodes,monthly_plan
+SYN_TRANSFER,Synthetic transfer,SB_SYN_A,RIVER,40.0,360.0,0.05,1,1900,0,uniform,built,all,0.0,0.0,"{""DM_SYN_B"": 1.0}","30,30,30,30,30,30,30,30,30,30,30,30"

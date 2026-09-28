@@ -1,0 +1,5 @@
+﻿year,city_code,城市,省份,local_sw,groundwater,unconventional,reservoir,diversion,transfer,historical_closure,lake,total_supply,流域
+2000,SYN_CITY_A,Synthetic city A,Synthetic province,1164.0,117.5,0.0,0.0,0.0,0.0,0.0,0.0,1281.6,Synthetic basin
+2000,SYN_CITY_B,Synthetic city B,Synthetic province,1553.7,148.5,0.0,0.0,0.0,342.0,0.0,0.0,2044.2,Synthetic basin
+2001,SYN_CITY_A,Synthetic city A,Synthetic province,309.7,150.0,0.0,0.0,0.0,0.0,0.0,0.0,459.7,Synthetic basin
+2001,SYN_CITY_B,Synthetic city B,Synthetic province,546.5,240.0,0.0,0.0,0.0,293.2,0.0,0.0,1079.7,Synthetic basin
