@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata in this file."
+type: software
+title: "WISAM: Water network Integrated Simulation and Allocation Model"
+version: "1.0.0"
+authors:
+  - family-names: Wang
+    given-names: Lichuan
+    affiliation: China Institute of Water Resources and Hydropower Research
+abstract: "A monthly model integrating hydrological processes, water-network infrastructure, operating rules and multi-source water allocation."
+keywords:
+  - water allocation
+  - water network
+  - hydrology
+  - inter-basin water transfer
+license: MIT

@@ -1,79 +1,30 @@
-# WISAM
+# 合成水网示例 / Synthetic water-network example
 
-**Water network Integrated Simulation and Allocation Model**  
-水网综合模拟与配置模型 · **Version 1.0.0**
+本示例采用人工构造的输入，演示WISAM的模型配置、运行和结果提取。
 
-WISAM是月尺度水文—水网—水资源配置模型，集成产汇流、水库与湖泊调蓄、跨区域调水、地下水供水、分行业需水及生态用水过程，支持多情景模拟和水量核算。
+在项目根目录执行：
 
-**作者：**王丽川（Wang Lichuan）  
-**单位：**中国水利水电科学研究院（China Institute of Water Resources and Hydropower Research）  
-**许可证：**[MIT](LICENSE)
-
-[English](README.en.md)
-
-## 安装
-
-Python ≥3.11，推荐Python 3.12。在项目根目录执行：
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```text
+python examples/synthetic_demo.py
 ```
 
-macOS/Linux使用`.venv/bin/python`。
+## 系统设置
 
-## 快速开始
+- 2000—2001年，共24个月。
+- 两个产流单元、两个城市需水节点、两个地下水供水节点及一条调水工程。
+- 产流单元面积100和80 km²，径流系数0.45；第二年降水为第一年的45%。
+- 总需水4200万m³/年；地下水年度基础可采量分别为150和240万m³。
+- 调水计划30万m³/月、取水能力40万m³/月、输水损失率5%。
 
-运行内置合成水网示例：
+脚本在`examples/data/`生成9个CSV输入，并将`WISAM_OUTPUT_DIR`设为`examples/output/`，隔离示例缓存。重复运行会重新生成示例文件。
 
-```powershell
-.\.venv\Scripts\python.exe examples/synthetic_demo.py
-```
+## 结果与检查
 
-示例包含两个产流单元、两个需水节点、地下水供水和一条调水工程，模拟24个月；输入和结果分别保存在`examples/data/`和`examples/output/`。
+示例检查逐月供需平衡、非负水量、有限数值、地下水与调水供水，以及干年缺水增加。请使用标准Python模式运行，保留断言检查。
 
-查看模型情景：
+参考运行的两年总需水为8400.0万m³、供水4865.3万m³、缺水3534.7万m³；地下水供水656.0万m³，调水来源供水635.2万m³。显示结果按表格精度舍入。
 
-```powershell
-.\.venv\Scripts\python.exe run_demo.py --list-scenarios
-```
+输出包括城市年度供需、水源构成、月度水量核算、调水汇总、合成水文与需水时序，以及`verification.json`检查记录。
 
-使用案例数据运行：
-
-```powershell
-$env:WISAM_OUTPUT_DIR = '.\output\case01'
-.\.venv\Scripts\python.exe run_demo.py --data-dir '.\data' --start-year 2024 --end-year 2024 --output '.\output\case01\results.xlsx'
-```
-
-`WISAM_OUTPUT_DIR`指定生成文件和水文缓存的根目录，应在启动Python前设置。各案例应使用相匹配的输入和缓存。输入格式见[数据接口](docs/DATA_INTERFACE.md)。
-
-## 文档
-
-- [模型概述](docs/MODEL_OVERVIEW.md)
-- [数据接口](docs/DATA_INTERFACE.md)
-- [运行环境](docs/DEPENDENCIES.md)
-- [建模与使用说明](docs/KNOWN_LIMITATIONS.md)
-- [示例说明](examples/README.md)
-- [数据与示例](DATA_POLICY.md)
-- [版本记录](CHANGELOG.md)
-
-## 项目结构
-
-| 目录 | 功能 |
-|---|---|
-| `api/` | 模型编程接口 |
-| `core/` | 节点、连接与网络 |
-| `hydro/` | 水文过程 |
-| `water/` | 工程运行与用水配置 |
-| `data_io/` | 输入与网络构建 |
-| `engine/` | 月步长模拟 |
-| `engineering/`、`coupling/` | 工程组织与单元耦合 |
-| `management/`、`scenario/` | 供水管理、结果与情景 |
-| `examples/`、`docs/` | 示例与文档 |
-
-## 校验与引用
-
-执行`python tools/verify_package.py`可核对发布文件的SHA-256校验值。软件运行检查记录位于`verification/`。
-
-使用本软件时，请根据[CITATION.cff](CITATION.cff)引用WISAM，并注明版本号。
+This example uses synthetic inputs to demonstrate model setup, execution and result extraction. Generated inputs and outputs are stored under `examples/`.
 

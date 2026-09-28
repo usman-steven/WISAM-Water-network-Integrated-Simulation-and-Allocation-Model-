@@ -1,0 +1,21 @@
+{
+  "data_origin": "Deterministic synthetic example data.",
+  "python_version": "3.12.14",
+  "numpy_version": "2.3.5",
+  "pandas_version": "3.0.1",
+  "months": 24,
+  "hydrological_units": 2,
+  "demand_nodes": 2,
+  "transfer_projects": 1,
+  "demand_wan_m3": 8400.0,
+  "supply_wan_m3": 4865.3,
+  "shortage_wan_m3": 3534.7,
+  "groundwater_supply_wan_m3": 656.0,
+  "transfer_supply_wan_m3": 635.2,
+  "annual_shortage_wan_m3": {
+    "2000": 874.2,
+    "2001": 2660.5
+  },
+  "max_monthly_accounting_residual_wan_m3": 2.842170943040401e-14,
+  "assertions": "passed"
+}
